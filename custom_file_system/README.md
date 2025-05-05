@@ -1,29 +1,85 @@
+# 🧠 Custom File System Simulator
 
-# Custom File System Simulator
+This project simulates a basic block-level file system using Python. It operates on a virtual disk (`disk.img`) and allows file creation, writing, reading, and deletion. A graphical interface is also included to make it easier to interact with.
 
-This Python project simulates a custom file system that operates on a simulated disk file (`disk.img`).
+---
 
-## Features
+## 📦 Features
 
-- Simulates a block-based file system
-- Basic file operations: create, read, write, delete
-- Supports file permissions (r, w, x)
-- Displays disk usage statistics
-- Stores metadata separately (`fs_metadata.json`)
+- ✅ Simulates a block-based virtual disk
+- 📁 Basic file operations: `create`, `read`, `write`, `delete`
+- 🔐 File permissions support (`r`, `w`, `x`)
+- 📊 Disk usage statistics (used, free, total blocks)
+- 🧠 Metadata stored in `fs_metadata.json`
+- 🖼️ GUI frontend built with Tkinter
+- 📄 Dump disk contents into a human-readable `.txt` file
 
-## How to Run
+---
 
-1. Make sure Python 3 is installed.
-2. Run the script:
+## 🖥️ How to Run
+
+### CLI Version
+> Uses `custom_fs.py` (or `fs_main.py`, if you kept the original name)
+
 ```bash
-python fs_main.py
+python custom_fs.py
 ```
+This runs the file system with example operations like file creation, writing, reading, and deletion.
 
-## Example Operations
-- Creates a file `/file1.txt`
-- Writes data to it
-- Reads from it
-- Deletes the file
-- Displays disk usage before and after
+### GUI Version
+> Uses gui.py
 
-You can extend it with more CLI options or directory support as needed.
+```bash
+python gui.py
+```
+Provides a simple interactive interface for managing the virtual file system:
+- Create file
+- Write to file
+- Read file contents
+- Delete file
+- View disk usage
+- Dump disk to .txt for inspection
+
+---
+## 📁 Project Structure
+```bash
+custom_file_system/
+├── custom_fs.py         # File system logic (FileSystem class)
+├── gui.py               # Tkinter GUI frontend
+├── disk.img             # Virtual disk image
+├── fs_metadata.json     # Metadata storage
+└── disk_dump.txt        # (Optional) Human-readable disk dump
+```
+---
+## 🔍 Sample CLI Operations
+```bash
+fs = FileSystem()
+fs.create_file("/file1.txt", "rw")
+fs.write_file("/file1.txt", "Hello from the virtual FS!")
+fs.read_file("/file1.txt")
+fs.disk_usage()
+fs.delete_file("/file1.txt")
+fs.disk_usage()
+```
+---
+## 📝 Disk Dump Preview
+
+Use `fs.dump_disk("disk_dump.txt")` to generate a readable version of disk contents for inspection.
+
+---
+
+## ⚙️ Requirements
+
+- Python 3.x
+- Tkinter (comes pre-installed with most Python distributions)
+
+---
+
+## 📌 Notes
+
+- This is a simulation, not a real OS-level file system.
+
+- The .img file is not mountable or bootable—it's used internally to store block data.
+
+- Useful for educational purposes and understanding low-level file system logic.
+---

@@ -1,12 +1,19 @@
 {
   "superblock": {
     "total_blocks": 1024,
-    "used_blocks": 0
+    "used_blocks": 2
   },
-  "files": {},
+  "files": {
+    "file2.txt": {
+      "size": 86,
+      "permissions": "rw",
+      "blocks": [
+        2
+      ],
+      "created": "2025-05-06T01:21:02.495874"
+    }
+  },
   "free_blocks": [
-    1,
-    2,
     3,
     4,
     5,
@@ -1027,6 +1034,7 @@
     1020,
     1021,
     1022,
-    1023
+    1023,
+    1
   ]
 }
