@@ -76,7 +76,15 @@ python vm_gui.py
 - `Page faults` are counted and displayed.
 - A statistics window shows a comparison graph of page faults for `FIFO`, `LRU`, `Optimal`, and `MRU`.
 
---- 
+---
+
+## 🔄 Recent Updates
+
+- Added support for the MRU (Most Recently Used) page replacement algorithm.
+- Improved visualization of memory frames and page tables.
+- Enhanced statistics window with a bar graph comparing page faults across algorithms.
+
+---
 
 ## 📚 Learning Outcome
 

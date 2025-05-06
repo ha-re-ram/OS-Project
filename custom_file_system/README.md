@@ -16,6 +16,14 @@ This project simulates a basic block-level file system using Python. It operates
 
 ---
 
+## 🔄 Recent Updates
+
+- Introduced a Tkinter-based GUI for user-friendly interaction.
+- Enhanced file operations with better error handling and detailed disk usage statistics.
+- Added a feature to dump disk contents into a human-readable `.txt` file for inspection.
+
+---
+
 ## 🖥️ How to Run
 
 ### CLI Version
